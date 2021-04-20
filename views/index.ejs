@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <% if (title) { %>
+            <title><%= title %></title>
+        <% } %>
+        <meta charset="utf-8">
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <main>
+            <div class="wrapper">
+                <h1 class="page-heading">Movie App</h1>
+            <div id="content">
+                <div class="movieSearch">
+                    <form action="/" id="searchForm" method="post">
+                        <input name="keyword" type="text" placeholder="Search movie titles...">
+                        <input type="submit" value="Submit">
+                    </form>
+                </div>
+                <% if (err) { %>
+                   <p><%= err %></p>
+                <% } %>
+                <ul class="movie-listing">
+                    <% for(var i=0; i < movies.length; i++) {%>
+                        <li class="movie-item">
+                            <div class="movie-title"><%= movies[i].original_title %></div>
+                            <div class="movie-image">
+                                <% if(movies[i].poster_path !== null) {%>
+                                    <img src="<%= `${imageUrl}${movies[i].poster_path}` %>">
+                                <% } else { %>
+                                    <img src="images/no-image.jpg">
+                                <% } %>
+                            </div>
+                        </li>
+                    <% } %>
+    
+                </ul>
+            </div>
+            </div>
+
+        </main>
+
+    </body>
+</html>

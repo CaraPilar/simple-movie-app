@@ -1,0 +1,31 @@
+{
+  "name": "simple-movie-app",
+  "version": "1.0.0",
+  "description": "Simple Node movie app",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CaraPilar/simple-movie-app.git"
+  },
+  "author": "Cara Smith",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CaraPilar/simple-movie-app/issues"
+  },
+  "homepage": "https://github.com/CaraPilar/simple-movie-app#readme",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "body-parser": "^1.19.0",
+    "dotenv": "^8.2.0",
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "tailwindcss": "^2.1.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  }
+}
