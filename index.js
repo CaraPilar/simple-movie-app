@@ -31,7 +31,7 @@ app.post('/', function (req, res) {
     requestMoviesDB(configUrl).then(configData=> {
         return configData;   // return system wide configuration information - cache this data
     }).then(info => {
-        if(info) {
+        if(info) { 
             const baseImageUrl = info.images.secure_base_url; 
             const imageSize = info.images.poster_sizes[3];
             let imageUrl = `${baseImageUrl}${imageSize}`;
